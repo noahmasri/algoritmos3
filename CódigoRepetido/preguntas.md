@@ -1,0 +1,11 @@
+### En los test 01 y 02 hay código repetido. Cuando lo extrajeron crearon algo nuevo. Eso es algo que estaba en la realidad y no estaba representado en nuestro código, por eso teníamos código repetido. ¿Cuál es esa entidad de la realidad que crearon?
+
+La entidad de la realidad que intentamos crear fue un contador de tiempo, un cronómetro, necesario para comprobar que añadir o remover un cliente no tarda más de cierta cantidad de milisegundos. Al principio creamos una abstracción que nos permitiera representar este objeto, pero después nos dimos cuenta que en la superclase de nuestra clase CustomerBookTest, TestCase, ya estaba implementado el mensaje “should: aClosure notTakeMoreThan: aLimit”, que era precisamente lo que necesitábamos, por lo que optamos por usar esta. Hacer una implementación que hiciera lo mismo era al fin y al cabo repetir código.
+	
+### ¿Cuáles son las formas en que podemos representar entes de la realidad en Smalltalk que conocés? Es decir, ¿qué cosas del lenguaje Smalltalk puedo usar para representar entidades de la realidad?
+
+Para representar entes de la realidad en Smalltalk ahora conocemos las clases para representar al mundo de las ideas, de los conceptos, para representar a un conjunto de objetos. A su vez, tenemos a las instancias de las clases, que representan a un ente particular de la realidad. Los distintos objetos se definen en base a los mensajes que saben responder, pues estos son los que le dan sentido y semántica. 
+
+### ¿Qué relación hay entre sacar código repetido (creando abstracciones) y la teoría del modelo/sistema (del paper de Naur)?
+
+El crear abstracciones, en nuestra visión, implica que se amplió el conocimiento del programador, que ahora puede nombrarlo de alguna manera y replicarlo las veces que sea necesario. Implica el estar en proceso de la construcción de una teoría, se elige la manera en que manejar los aspectos de la realidad que conciernen a este código repetido, mediante la abstracción y el nombramiento del código repetido.
